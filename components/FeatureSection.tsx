@@ -213,16 +213,16 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({ layout, title, s
                     <div className={`absolute inset-0 transition-opacity duration-500 ${activeIndex === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
                         <div className="grid grid-cols-2 gap-2">
                            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                              <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover"/>
+                              <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover" alt="Photo 1"/>
                            </div>
                            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                              <img src="https://images.unsplash.com/photo-1515549832467-8783363e19b6?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover"/>
+                              <img src="https://images.unsplash.com/photo-1515549832467-8783363e19b6?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover" alt="Photo 2"/>
                            </div>
                            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                              <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover"/>
+                              <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover" alt="Photo 3"/>
                            </div>
                            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden relative">
-                              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover"/>
+                              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover" alt="Photo 4"/>
                               <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-xs font-bold">+15</div>
                            </div>
                         </div>
@@ -255,7 +255,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({ layout, title, s
               {/* Fake Chrome Header */}
               <div className="bg-white px-5 py-3 flex items-center gap-3 border-b border-gray-100">
                  <div className="w-6 h-6 rounded-full overflow-hidden border border-gray-200">
-                    <img src="https://images.unsplash.com/photo-1621905235294-7500bed49cb3?auto=format&fit=crop&q=80&w=100" />
+                    <img src="https://images.unsplash.com/photo-1621905235294-7500bed49cb3?auto=format&fit=crop&q=80&w=100" alt="Avatar"/>
                  </div>
                  <div className="flex-1">
                     <div className="text-[12px] font-medium text-[#202124]">The Good Design Store</div>
@@ -268,7 +268,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({ layout, title, s
                 {/* Slide 1: Post */}
                 <div className={`absolute top-4 left-4 right-4 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-500 ${activeIndex === 0 ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
                    <div className="aspect-[4/3] relative">
-                      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" />
+                      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Post"/>
                       <div className="absolute top-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-full">1/2</div>
                    </div>
                    <div className="p-4">
@@ -288,7 +288,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({ layout, title, s
                          <div className="text-[12px] font-bold text-[#202124]">Julie S.</div>
                          <div className="text-[10px] text-[#5f6368]">Local Guide</div>
                       </div>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" className="w-4 h-4 ml-auto opacity-50"/>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" className="w-4 h-4 ml-auto opacity-50" alt="Google"/>
                    </div>
                    <div className="flex text-[#fbbc04] text-[12px] mb-2">★★★★★</div>
                    <p className="text-[13px] text-[#3c4043] mb-4 leading-relaxed">Such a beautiful selection of items! The staff was incredibly helpful in finding exactly what I needed.</p>
@@ -311,7 +311,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({ layout, title, s
                          <div className="text-[13px] font-medium text-[#202124] mb-1">Do you offer gift wrapping?</div>
                          <div className="flex items-start gap-2">
                             <div className="mt-1 w-4 h-4 rounded-full overflow-hidden flex-shrink-0">
-                               <img src="https://images.unsplash.com/photo-1621905235294-7500bed49cb3?auto=format&fit=crop&q=80&w=100" />
+                               <img src="https://images.unsplash.com/photo-1621905235294-7500bed49cb3?auto=format&fit=crop&q=80&w=100" alt="Avatar" />
                             </div>
                             <div className="text-[12px] text-[#5f6368]">
                                <span className="font-medium text-[#202124]">The Good Design Store (Owner)</span>

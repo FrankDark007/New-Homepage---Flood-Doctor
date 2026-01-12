@@ -71,43 +71,6 @@ export const Hero: React.FC = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-20 lg:py-28 flex flex-col md:flex-row items-center gap-16 relative overflow-visible">
       
-      <style>{`
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        @keyframes spin-reverse-slower {
-          from { transform: rotate(360deg); }
-          to { transform: rotate(0deg); }
-        }
-        
-        /* Left Image: Worker in Yellow Vest */
-        /* Start: Left of phone, scaled 0 */
-        /* Middle: Large, hovering */
-        /* End: Shrinks and moves into the main photo slot */
-        @keyframes fly-in-main {
-          0% { opacity: 0; transform: translate(-150%, 0%) scale(0.5); }
-          20% { opacity: 1; transform: translate(-120%, -10%) scale(1.2); }
-          40% { transform: translate(-120%, -10%) scale(1.1); }
-          100% { opacity: 0; transform: translate(20px, 80px) scale(0.2); } /* Target: ~Center of Main Image Slot */
-        }
-
-        /* Right Image: Van */
-        /* Target: Top Right Slot */
-        @keyframes fly-in-secondary {
-          0% { opacity: 0; transform: translate(150%, 50%) scale(0.5); }
-          20% { opacity: 1; transform: translate(120%, 20%) scale(1.2); }
-          40% { transform: translate(120%, 20%) scale(1.1); }
-          100% { opacity: 0; transform: translate(-50px, -50px) scale(0.2); }
-        }
-
-        .animate-spin-slow { animation: spin-slow 40s linear infinite; }
-        .animate-spin-reverse-slower { animation: spin-reverse-slower 50s linear infinite; }
-        
-        .animate-fly-main { animation: fly-in-main 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-        .animate-fly-secondary { animation: fly-in-secondary 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-      `}</style>
-
       <div className="flex-1 text-center md:text-left z-10">
         <h1 className="text-[48px] md:text-[56px] lg:text-[72px] font-bold text-[#202124] mb-8 leading-[1.1] tracking-tight">
           <span className="text-[#1a73e8]">Stand out</span> on Google with a free Business Profile
@@ -143,7 +106,6 @@ export const Hero: React.FC = () => {
            </div>
         </div>
 
-
         {/* =========================================
             FLYING PHOTOS LAYER (Z-INDEX 50)
             These appear OUTSIDE the phone and fly IN
@@ -153,17 +115,16 @@ export const Hero: React.FC = () => {
              
              {/* Left Bubble: Worker (Matches Main Image) */}
              <div className={`absolute w-32 h-32 rounded-full border-[6px] border-white shadow-2xl overflow-hidden bg-white z-50 ${uiState === 'profile_empty' ? 'animate-fly-main' : 'opacity-0'}`}>
-                <img src="https://lh3.googleusercontent.com/p/AF1QipMQKIyykDu-juQpBpRKvURzJet6hcu3w7V5hZjC=s1360-w1360-h1020-rw" className="w-full h-full object-cover" />
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMQKIyykDu-juQpBpRKvURzJet6hcu3w7V5hZjC=s1360-w1360-h1020-rw" className="w-full h-full object-cover" alt="Worker" />
              </div>
 
              {/* Right Bubble: Van (Matches Top Right Image) */}
              <div className={`absolute w-24 h-24 rounded-full border-[6px] border-white shadow-2xl overflow-hidden bg-white z-50 ${uiState === 'profile_empty' ? 'animate-fly-secondary' : 'opacity-0'}`}>
-                <img src="https://lh3.googleusercontent.com/p/AF1QipN-lLtPcfIHKaCBiZj2TyDRuiQ5fu9CTl5cXwcy=s1360-w1360-h1020-rw" className="w-full h-full object-cover" />
+                <img src="https://lh3.googleusercontent.com/p/AF1QipN-lLtPcfIHKaCBiZj2TyDRuiQ5fu9CTl5cXwcy=s1360-w1360-h1020-rw" className="w-full h-full object-cover" alt="Van" />
              </div>
 
           </div>
         )}
-
 
         {/* Phone Mockup Container */}
         <div className="relative bg-white rounded-[2.5rem] shadow-[0_0_0_8px_rgb(255,255,255),0_1px_2px_0_rgba(60,64,67,0.3),0_2px_6px_2px_rgba(60,64,67,0.15)] border border-gray-100 flex flex-col overflow-hidden 
@@ -173,7 +134,7 @@ export const Hero: React.FC = () => {
           lg:w-[340px] lg:h-[680px] 
           xl:w-[360px] xl:h-[720px] 
           2xl:w-[380px] 2xl:h-[760px]
-          transition-all duration-300 ease-in-out z-20 font-['Roboto']
+          transition-all duration-300 ease-in-out z-20 font-sans
         ">
           
           {/* 1. SEARCH SCREEN */}
@@ -244,7 +205,7 @@ export const Hero: React.FC = () => {
                   <div className="p-4 space-y-3 bg-[#f8f9fa] border-b border-gray-100">
                       <div className="flex gap-3 relative">
                           <div className="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden shrink-0 z-10">
-                             <img src="https://lh3.googleusercontent.com/p/AF1QipN-lLtPcfIHKaCBiZj2TyDRuiQ5fu9CTl5cXwcy=s1360-w1360-h1020-rw" className="w-full h-full object-cover" />
+                             <img src="https://lh3.googleusercontent.com/p/AF1QipN-lLtPcfIHKaCBiZj2TyDRuiQ5fu9CTl5cXwcy=s1360-w1360-h1020-rw" className="w-full h-full object-cover" alt="Business" />
                           </div>
                           <div className="flex-1 z-10">
                               <h3 className="text-[16px] text-[#202124] font-normal mb-1">Flood Doctor</h3>
@@ -284,7 +245,6 @@ export const Hero: React.FC = () => {
                   </div>
               </div>
           </div>
-
 
           {/* 3. PROFILE SCREEN (The Final Destination) */}
           <div className={`absolute inset-0 bg-white flex flex-col transition-opacity duration-700 ${uiState === 'profile_empty' || uiState === 'profile_filled' ? 'opacity-100 z-40' : 'opacity-0 z-0'}`}>
@@ -334,6 +294,7 @@ export const Hero: React.FC = () => {
                          <img 
                             src="https://lh3.googleusercontent.com/p/AF1QipMQKIyykDu-juQpBpRKvURzJet6hcu3w7V5hZjC=s1360-w1360-h1020-rw" 
                             className={`w-full h-full object-cover transition-opacity duration-500 ${uiState === 'profile_filled' ? 'opacity-100' : 'opacity-0'}`} 
+                            alt="Main Work"
                           />
                       </div>
                       
@@ -344,6 +305,7 @@ export const Hero: React.FC = () => {
                              <img 
                                 src="https://lh3.googleusercontent.com/p/AF1QipN-lLtPcfIHKaCBiZj2TyDRuiQ5fu9CTl5cXwcy=s1360-w1360-h1020-rw" 
                                 className={`w-full h-full object-cover transition-opacity duration-500 ${uiState === 'profile_filled' ? 'opacity-100' : 'opacity-0'}`} 
+                                alt="Work 2"
                              />
                          </div>
                          {/* Bottom Right */}
@@ -351,6 +313,7 @@ export const Hero: React.FC = () => {
                              <img 
                                 src="https://lh3.googleusercontent.com/p/AF1QipPJ3f6WGZzsqGzpkQFYLcLxCLrUkh_kcz2CqHbt=s1360-w1360-h1020-rw" 
                                 className={`w-full h-full object-cover transition-opacity duration-500 delay-300 ${uiState === 'profile_filled' ? 'opacity-100' : 'opacity-0'}`} 
+                                alt="Work 3"
                              />
                          </div>
                       </div>

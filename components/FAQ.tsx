@@ -27,15 +27,6 @@ export const FAQ: React.FC = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const expandAll = () => {
-    // If all are open (not possible with single mode, but acting as reset or standard FAQ behavior)
-    // For single accordion, "Expand all" usually expands everything. 
-    // If the request implies strict single-item, Expand All might be contradictory or just switch mode.
-    // However, usually "Expand All" opens all. I will skip complex multi-mode logic and just focus on the item click.
-    // But for the sake of the button provided in design:
-    console.log("Expand all clicked - placeholder for multi-expand logic if desired");
-  };
-
   return (
     <section className="py-24 max-w-7xl mx-auto px-6 border-t border-gray-100">
       <div className="max-w-5xl mx-auto">

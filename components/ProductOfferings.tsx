@@ -64,7 +64,7 @@ export const ProductOfferings: React.FC = () => {
                 <div className="flex items-center gap-1 text-[8px]"><span className="text-[#fbbc04]">★★★★★</span></div>
               </div>
               <div className="w-10 h-10 bg-gray-100 rounded-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1621905235294-7500bed49cb3?auto=format&fit=crop&q=80&w=100" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1621905235294-7500bed49cb3?auto=format&fit=crop&q=80&w=100" className="w-full h-full object-cover" alt="Service" />
               </div>
             </div>
             <div className="flex gap-4 text-[9px] text-[#1a73e8] font-bold border-b border-gray-100 pb-2 mb-4">
@@ -125,7 +125,7 @@ export const ProductOfferings: React.FC = () => {
             {cards.map((card, i) => (
               <div 
                 key={i} 
-                ref={(el) => (cardRefs.current[i] = el)}
+                ref={(el) => { cardRefs.current[i] = el; }}
                 className={`transition-all duration-500 ease-out ${
                   activeCard === i 
                     ? 'opacity-100 scale-100' 
